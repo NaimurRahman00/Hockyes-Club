@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -87,7 +87,9 @@
               tabindex="0"
               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li class="border-b-[1px] border-slate-50"><a class="text-primary-color">Home</a></li>
+              <li class="border-b-[1px] border-slate-50">
+                <a class="text-primary-color">Home</a>
+              </li>
               <li class="border-b-[1px] border-slate-50"><a>About</a></li>
               <li class="border-b-[1px] border-slate-50"><a>Pages</a></li>
               <li class="border-b-[1px] border-slate-50"><a>Blog</a></li>
@@ -136,46 +138,108 @@
       <!-- Banner section -->
       <div>
         <div class="carousel w-full h-[47%] my-8 space-x-10">
-            <!-- Slide 1 -->
-            <div id="slide1" class="carousel-item relative w-full h-[47%]">
-              <img src="./Images/1.png" class="w-full" />
-              <div class="absolute space-x-4 lg:left-8 lg:bottom-8 flex transform left-0 right-0 lg:right-auto flex justify-center bottom-3">
-                <a href="#slide3" class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl text-base font-light">❮</a> 
-                <a href="#slide2" class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light">❯</a>
-              </div>
-              <div class="hidden lg:block absolute right-8 bottom-8 bg-secondary-color w-[48%] p-8 rounded-2xl space-y-4">
-                <h3 class="text-white text-lg lg:text-2xl">Meet all the heroes from the field</h3>
-                <p class="text-white opacity-60 text-sm lg:text-base">Phero Hockey Club has recently celebrated a number of victories as Captain of the Bangladesh Over 70s team.</p>
-              </div>
+          <!-- Slide 1 -->
+          <div id="slide1" class="carousel-item relative w-full h-[47%]">
+            <img src="./Images/1.png" class="w-full" />
+            <div
+              class="absolute space-x-4 lg:left-8 lg:bottom-8 flex transform left-0 right-0 lg:right-auto flex justify-center bottom-3"
+            >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl text-base font-light"
+                >❮</a
+              >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light"
+                >❯</a
+              >
             </div>
-            <!-- Slide 2 -->
-            <div id="slide2" class="carousel-item relative w-full lg:h-[580px] rounded-2xl overflow-hidden">
-              <img src="./Images/slider-2.jpg" class="w-full" />
-              <div class="absolute space-x-4 lg:left-8 lg:bottom-8 flex transform left-0 right-0 lg:right-auto flex justify-center bottom-3">
-                <a href="#slide1" class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light">❮</a> 
-                <a href="#slide3" class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light">❯</a>
-              </div>
-              <div class="hidden lg:block absolute right-8 bottom-8 w-[48%] p-8 rounded-2xl space-y-4 bg-gradient-to-r from-emerald-400 to-emerald-600">
-                <h3 class="text-white text-2xl">Meet all the heroes from the field</h3>
-                <p class="text-white opacity-60">Phero Hockey Club has recently celebrated a number of victories as Captain of the Bangladesh Over 70s team.</p>
-              </div>
+            <div
+              class="hidden lg:block absolute right-8 bottom-8 bg-secondary-color w-[48%] p-8 rounded-2xl space-y-4"
+            >
+              <h3 class="text-white text-lg lg:text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p class="text-white opacity-60 text-sm lg:text-base">
+                Phero Hockey Club has recently celebrated a number of victories
+                as Captain of the Bangladesh Over 70s team.
+              </p>
             </div>
-            <!-- Slide 3 -->
-            <div id="slide3" class="carousel-item relative w-full lg:h-[580px] rounded-2xl overflow-hidden">
-              <img src="./Images/slider3.jpg" class="w-full" />
-              <div class="absolute space-x-4 lg:left-8 lg:bottom-8 flex transform left-0 right-0 lg:right-auto flex justify-center bottom-3">
-                <a href="#slide2" class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light">❮</a> 
-                <a href="#slide1" class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light">❯</a>
-              </div>
-              <div class="hidden lg:block absolute right-8 bottom-8 w-[48%] p-8 rounded-2xl space-y-4 bg-gradient-to-r from-rose-600 to-rose-800">
-                <h3 class="text-white text-2xl">Meet all the heroes from the field</h3>
-                <p class="text-white opacity-60">Phero Hockey Club has recently celebrated a number of victories as Captain of the Bangladesh Over 70s team.</p>
-              </div>
+          </div>
+          <!-- Slide 2 -->
+          <div
+            id="slide2"
+            class="carousel-item relative w-full lg:h-[580px] rounded-2xl overflow-hidden"
+          >
+            <img src="./Images/slider-2.jpg" class="w-full" />
+            <div
+              class="absolute space-x-4 lg:left-8 lg:bottom-8 flex transform left-0 right-0 lg:right-auto flex justify-center bottom-3"
+            >
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                >❮</a
+              >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                >❯</a
+              >
             </div>
+            <div
+              class="hidden lg:block absolute right-8 bottom-8 w-[48%] p-8 rounded-2xl space-y-4 bg-gradient-to-r from-emerald-400 to-emerald-600"
+            >
+              <h3 class="text-white text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p class="text-white opacity-60">
+                Phero Hockey Club has recently celebrated a number of victories
+                as Captain of the Bangladesh Over 70s team.
+              </p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div
+            id="slide3"
+            class="carousel-item relative w-full lg:h-[580px] rounded-2xl overflow-hidden"
+          >
+            <img src="./Images/slider3.jpg" class="w-full" />
+            <div
+              class="absolute space-x-4 lg:left-8 lg:bottom-8 flex transform left-0 right-0 lg:right-auto flex justify-center bottom-3"
+            >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                >❮</a
+              >
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                >❯</a
+              >
+            </div>
+            <div
+              class="hidden lg:block absolute right-8 bottom-8 w-[48%] p-8 rounded-2xl space-y-4 bg-gradient-to-r from-rose-600 to-rose-800"
+            >
+              <h3 class="text-white text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p class="text-white opacity-60">
+                Phero Hockey Club has recently celebrated a number of victories
+                as Captain of the Bangladesh Over 70s team.
+              </p>
+            </div>
+          </div>
         </div>
         <div class="lg:hidden bg-secondary-color p-4 rounded-2xl space-y-2">
-          <h3 class="text-white text-lg lg:text-2xl">Meet all the heroes from the field</h3>
-          <p class="text-white opacity-60 text-sm lg:text-base">Phero Hockey Club has recently celebrated a number of victories as Captain of the Bangladesh Over 70s team.</p>
+          <h3 class="text-white text-lg lg:text-2xl">
+            Meet all the heroes from the field
+          </h3>
+          <p class="text-white opacity-60 text-sm lg:text-base">
+            Phero Hockey Club has recently celebrated a number of victories as
+            Captain of the Bangladesh Over 70s team.
+          </p>
         </div>
       </div>
     </header>
@@ -184,35 +248,78 @@
       <section class="lg:py-24">
         <div class="pt-8 container2 border-t-2 border-dashed">
           <div class="text-center pb-8 border-b-2 border-dashed">
-            <h1 class="text-[22px] lg:text-4xl font-extrabold text-secondary-color">Professional Hockeys Club</h1>
-            <p class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60">Our junior hockey programmes are currently full on - please see the Junior Section page for more information and get involved</p>
+            <h1
+              class="text-[22px] lg:text-4xl font-extrabold text-secondary-color"
+            >
+              Professional Hockeys Club
+            </h1>
+            <p
+              class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60"
+            >
+              Our junior hockey programmes are currently full on - please see
+              the Junior Section page for more information and get involved
+            </p>
           </div>
-          <div class="w-11/12 pt-12 m-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div
+            class="w-11/12 pt-12 m-auto grid grid-cols-1 lg:grid-cols-4 gap-8"
+          >
             <!-- progress 1 -->
             <div class="text-center">
-              <div class="radial-progress text-primary-color" style="--value:87;--size:7.5rem" role="progressbar"><span class="text-secondary-color font-extrabold">87%</span></div>
+              <div
+                class="radial-progress text-primary-color"
+                style="--value: 87; --size: 7.5rem"
+                role="progressbar"
+              >
+                <span class="text-secondary-color font-extrabold">87%</span>
+              </div>
               <h3 class="text-xl font-medium mt-6">Prayer Facility</h3>
-              <p class="text-secondary-color opacity-60 m-4">In this club we provide prayer Facility for every religion.</p>
+              <p class="text-secondary-color opacity-60 m-4">
+                In this club we provide prayer Facility for every religion.
+              </p>
             </div>
             <!-- progress 2 -->
             <div class="text-center">
-              <div class="radial-progress text-green-500" style="--value:95;--size:7.5rem" role="progressbar"><span class="text-secondary-color font-extrabold">95%</span></div>
+              <div
+                class="radial-progress text-green-500"
+                style="--value: 95; --size: 7.5rem"
+                role="progressbar"
+              >
+                <span class="text-secondary-color font-extrabold">95%</span>
+              </div>
               <h3 class="text-xl font-medium mt-6">Experienced Coach</h3>
-              <p class="text-secondary-color opacity-60 m-4">In this club we have experienced coach for improvment our players.</p>
+              <p class="text-secondary-color opacity-60 m-4">
+                In this club we have experienced coach for improvment our
+                players.
+              </p>
             </div>
             <!-- progress 3 -->
             <div class="text-center">
-              <div class="radial-progress text-yellow-500" style="--value:90;--size:7.5rem" role="progressbar"><span class="text-secondary-color font-extrabold">90%</span></div>
+              <div
+                class="radial-progress text-yellow-500"
+                style="--value: 90; --size: 7.5rem"
+                role="progressbar"
+              >
+                <span class="text-secondary-color font-extrabold">90%</span>
+              </div>
               <h3 class="text-xl font-medium mt-6">Senior Player</h3>
-              <p class="text-secondary-color opacity-60 m-4">In this club we have senior and experienced players.</p>
+              <p class="text-secondary-color opacity-60 m-4">
+                In this club we have senior and experienced players.
+              </p>
             </div>
             <!-- progress 4 -->
             <div class="text-center">
-              <div class="radial-progress text-blue-500" style="--value:80;--size:7.5rem" role="progressbar"><span class="text-secondary-color font-extrabold">80%</span></div>
+              <div
+                class="radial-progress text-blue-500"
+                style="--value: 80; --size: 7.5rem"
+                role="progressbar"
+              >
+                <span class="text-secondary-color font-extrabold">80%</span>
+              </div>
               <h3 class="text-xl font-medium mt-6">Training Ground</h3>
-              <p class="text-secondary-color opacity-60 m-4">In this club we have few training ground for our players.</p>
+              <p class="text-secondary-color opacity-60 m-4">
+                In this club we have few training ground for our players.
+              </p>
             </div>
- 
           </div>
         </div>
       </section>
@@ -220,19 +327,40 @@
       <section class="">
         <div class="pt-8 container2 border-t-2 border-dashed">
           <div class="text-center pb-8 border-b-2 border-dashed">
-            <h1 class="text-[22px] lg:text-4xl font-extrabold text-secondary-color">Program Sections</h1>
-            <p class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60">Our junior hockey programmes are currently full on - please see the Junior Section page for more information and get involved</p>
+            <h1
+              class="text-[22px] lg:text-4xl font-extrabold text-secondary-color"
+            >
+              Program Sections
+            </h1>
+            <p
+              class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60"
+            >
+              Our junior hockey programmes are currently full on - please see
+              the Junior Section page for more information and get involved
+            </p>
           </div>
           <!-- Cards -->
           <div class="mt-12 mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Card 1 -->
             <div class="card shadow-xl image-full">
-              <figure class=""><img class="w-full" src="./Images/2.png" alt="Hockey" /></figure>
+              <figure class="">
+                <img class="w-full" src="./Images/2.png" alt="Hockey" />
+              </figure>
               <div class="card-body justify-end">
-                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">Junior Program</h2>
-                <p class="mt-4 font-medium flex-grow-0">Welcome to Hockey Bangladesh Programs. We want all Bangladeshi involved in the game, so we are creating more opportunities for more people to play hockey in more ways.</p>
+                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">
+                  Junior Program
+                </h2>
+                <p class="mt-4 font-medium flex-grow-0">
+                  Welcome to Hockey Bangladesh Programs. We want all Bangladeshi
+                  involved in the game, so we are creating more opportunities
+                  for more people to play hockey in more ways.
+                </p>
                 <div class="card-actions justify-start mt-6">
-                  <button class="btn btn-primary text-lg lg:text-xl font-bold text-white bg-primary-color hover:bg-red-600 border-0">Register Now!</button>
+                  <button
+                    class="btn btn-primary text-lg lg:text-xl font-bold text-white bg-primary-color hover:bg-red-600 border-0"
+                  >
+                    Register Now!
+                  </button>
                 </div>
               </div>
             </div>
@@ -240,25 +368,46 @@
             <div class="card shadow-xl image-full">
               <figure><img src="./Images/3.png" alt="Hockey" /></figure>
               <div class="card-body justify-end">
-                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">Teenager Program</h2>
-                <p class="mt-4 font-medium flex-grow-0">Welcome to Hockey Bangladesh Programs. We want all Bangladeshi involved in the game, so we are creating more opportunities for more people to play hockey in more ways.</p>
+                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">
+                  Teenager Program
+                </h2>
+                <p class="mt-4 font-medium flex-grow-0">
+                  Welcome to Hockey Bangladesh Programs. We want all Bangladeshi
+                  involved in the game, so we are creating more opportunities
+                  for more people to play hockey in more ways.
+                </p>
                 <div class="card-actions justify-start mt-6">
-                  <button class="btn btn-primary text-lg lg:text-xl font-bold text-white bg-primary-color hover:bg-red-600 border-0">Register Now!</button>
+                  <button
+                    class="btn btn-primary text-lg lg:text-xl font-bold text-white bg-primary-color hover:bg-red-600 border-0"
+                  >
+                    Register Now!
+                  </button>
                 </div>
               </div>
             </div>
-            <!-- Card 3 --> 
+            <!-- Card 3 -->
             <div class="card shadow-xl image-full lg:col-span-2">
-              <figure><img class="w-full" src="./Images/4.png" alt="Hockey" /></figure>
+              <figure>
+                <img class="w-full" src="./Images/4.png" alt="Hockey" />
+              </figure>
               <div class="card-body justify-end lg:w-1/2">
-                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">Professional Program</h2>
-                <p class="mt-4 font-medium flex-grow-0">Welcome to Hockey Bangladesh Programs. We want all Bangladeshi involved in the game, so we are creating more opportunities for more people to play hockey in more ways.</p>
+                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">
+                  Professional Program
+                </h2>
+                <p class="mt-4 font-medium flex-grow-0">
+                  Welcome to Hockey Bangladesh Programs. We want all Bangladeshi
+                  involved in the game, so we are creating more opportunities
+                  for more people to play hockey in more ways.
+                </p>
                 <div class="card-actions justify-start mt-6">
-                  <button class="btn btn-primary text-lg lg:text-xl font-bold text-white bg-primary-color hover:bg-red-600 border-0">Register Now!</button>
+                  <button
+                    class="btn btn-primary text-lg lg:text-xl font-bold text-white bg-primary-color hover:bg-red-600 border-0"
+                  >
+                    Register Now!
+                  </button>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -266,156 +415,424 @@
       <section class="">
         <div class="pt-8 container2 border-t-2 border-dashed">
           <div class="text-center pb-8 border-b-2 border-dashed">
-            <h1 class="text-[22px] lg:text-4xl font-extrabold text-secondary-color">Our New Products</h1>
-            <p class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60">Check out unreleased gear from all of the top hockey brands! Learn about what gear is coming soon and discover which NHL players have already picked it up!</p>
+            <h1
+              class="text-[22px] lg:text-4xl font-extrabold text-secondary-color"
+            >
+              Our New Products
+            </h1>
+            <p
+              class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60"
+            >
+              Check out unreleased gear from all of the top hockey brands! Learn
+              about what gear is coming soon and discover which NHL players have
+              already picked it up!
+            </p>
           </div>
           <!-- All products -->
-          <div class="py-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="pt-12 mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Product card 1 -->
             <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
               <figure class="p-0">
-                <img src="./Images/5.png" alt="Jacket" class="rounded-xl w-full" />
+                <img
+                  src="./Images/5.png"
+                  alt="Jacket"
+                  class="rounded-xl w-full"
+                />
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
-                  <span class="mr-1"><i class="fa-solid fa-star text-amber-400"></i></span>
+                  <span class="mr-1"
+                    ><i class="fa-solid fa-star text-amber-400"></i
+                  ></span>
                   <span class="mr-4 opacity-60">5.0</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-eye"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-eye"></i
+                  ></span>
                   <span class="mr-4 opacity-60">20</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-heart"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-heart"></i
+                  ></span>
                   <span class="mr-4 opacity-60">200</span>
                 </div>
                 <div>
-                  <h2 class="card-title text-xl font-extrabold text-secondary-color">World Cup Flags Hockey!</h2>
-                  <p class="text-left mt-3 font-medium opacity-60">Check out our brand new hockey and football products</p>
+                  <h2
+                    class="card-title text-xl font-extrabold text-secondary-color"
+                  >
+                    World Cup Flags Hockey!
+                  </h2>
+                  <p class="text-left mt-3 font-medium opacity-60">
+                    Check out our brand new hockey and football products
+                  </p>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center">
-                  <h4 class="text-lg font-extrabold text-primary-color">Price - $22.00</h4>
-                  <h5 class="font-medium opacity-60"><span><i class="fa-solid fa-cart-shopping mr-1"></i></span> Delivery Fee : Free</h5>
+                <div
+                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                >
+                  <h4 class="text-lg font-extrabold text-primary-color">
+                    Price - $22.00
+                  </h4>
+                  <h5 class="font-medium opacity-60">
+                    <span><i class="fa-solid fa-cart-shopping mr-1"></i></span>
+                    Delivery Fee : Free
+                  </h5>
                 </div>
               </div>
             </div>
             <!-- Product card 2 -->
             <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
               <figure class="p-0">
-                <img src="./Images/6.png" alt="Jacket" class="rounded-xl w-full" />
+                <img
+                  src="./Images/6.png"
+                  alt="Jacket"
+                  class="rounded-xl w-full"
+                />
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
-                  <span class="mr-1"><i class="fa-solid fa-star text-amber-400"></i></span>
+                  <span class="mr-1"
+                    ><i class="fa-solid fa-star text-amber-400"></i
+                  ></span>
                   <span class="mr-4 opacity-60">5.0</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-eye"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-eye"></i
+                  ></span>
                   <span class="mr-4 opacity-60">20</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-heart"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-heart"></i
+                  ></span>
                   <span class="mr-4 opacity-60">200</span>
                 </div>
                 <div>
-                  <h2 class="card-title text-xl font-extrabold text-secondary-color">World Cup Flags Hockey!</h2>
-                  <p class="text-left mt-3 font-medium opacity-60">Check out our brand new hockey and football products</p>
+                  <h2
+                    class="card-title text-xl font-extrabold text-secondary-color"
+                  >
+                    World Cup Flags Hockey!
+                  </h2>
+                  <p class="text-left mt-3 font-medium opacity-60">
+                    Check out our brand new hockey and football products
+                  </p>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center">
-                  <h4 class="text-lg font-extrabold text-primary-color">Price - $22.00</h4>
-                  <h5 class="font-medium opacity-60"><span><i class="fa-solid fa-cart-shopping mr-1"></i></span> Delivery Fee : Free</h5>
+                <div
+                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                >
+                  <h4 class="text-lg font-extrabold text-primary-color">
+                    Price - $22.00
+                  </h4>
+                  <h5 class="font-medium opacity-60">
+                    <span><i class="fa-solid fa-cart-shopping mr-1"></i></span>
+                    Delivery Fee : Free
+                  </h5>
                 </div>
               </div>
             </div>
             <!-- Product card 3 -->
             <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
               <figure class="p-0">
-                <img src="./Images/7.png" alt="Jacket" class="rounded-xl w-full" />
+                <img
+                  src="./Images/7.png"
+                  alt="Jacket"
+                  class="rounded-xl w-full"
+                />
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
-                  <span class="mr-1"><i class="fa-solid fa-star text-amber-400"></i></span>
+                  <span class="mr-1"
+                    ><i class="fa-solid fa-star text-amber-400"></i
+                  ></span>
                   <span class="mr-4 opacity-60">5.0</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-eye"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-eye"></i
+                  ></span>
                   <span class="mr-4 opacity-60">20</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-heart"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-heart"></i
+                  ></span>
                   <span class="mr-4 opacity-60">200</span>
                 </div>
                 <div>
-                  <h2 class="card-title text-xl font-extrabold text-secondary-color">World Cup Flags Hockey!</h2>
-                  <p class="text-left mt-3 font-medium opacity-60">Check out our brand new hockey and football products</p>
+                  <h2
+                    class="card-title text-xl font-extrabold text-secondary-color"
+                  >
+                    World Cup Flags Hockey!
+                  </h2>
+                  <p class="text-left mt-3 font-medium opacity-60">
+                    Check out our brand new hockey and football products
+                  </p>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center">
-                  <h4 class="text-lg font-extrabold text-primary-color">Price - $22.00</h4>
-                  <h5 class="font-medium opacity-60"><span><i class="fa-solid fa-cart-shopping mr-1"></i></span> Delivery Fee : Free</h5>
+                <div
+                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                >
+                  <h4 class="text-lg font-extrabold text-primary-color">
+                    Price - $22.00
+                  </h4>
+                  <h5 class="font-medium opacity-60">
+                    <span><i class="fa-solid fa-cart-shopping mr-1"></i></span>
+                    Delivery Fee : Free
+                  </h5>
                 </div>
               </div>
             </div>
             <!-- Product card 4 -->
             <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
               <figure class="p-0">
-                <img src="./Images/8.png" alt="Jacket" class="rounded-xl w-full" />
+                <img
+                  src="./Images/8.png"
+                  alt="Jacket"
+                  class="rounded-xl w-full"
+                />
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
-                  <span class="mr-1"><i class="fa-solid fa-star text-amber-400"></i></span>
+                  <span class="mr-1"
+                    ><i class="fa-solid fa-star text-amber-400"></i
+                  ></span>
                   <span class="mr-4 opacity-60">5.0</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-eye"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-eye"></i
+                  ></span>
                   <span class="mr-4 opacity-60">20</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-heart"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-heart"></i
+                  ></span>
                   <span class="mr-4 opacity-60">200</span>
                 </div>
                 <div>
-                  <h2 class="card-title text-xl font-extrabold text-secondary-color">World Cup Flags Hockey!</h2>
-                  <p class="text-left mt-3 font-medium opacity-60">Check out our brand new hockey and football products</p>
+                  <h2
+                    class="card-title text-xl font-extrabold text-secondary-color"
+                  >
+                    World Cup Flags Hockey!
+                  </h2>
+                  <p class="text-left mt-3 font-medium opacity-60">
+                    Check out our brand new hockey and football products
+                  </p>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center">
-                  <h4 class="text-lg font-extrabold text-primary-color">Price - $22.00</h4>
-                  <h5 class="font-medium opacity-60"><span><i class="fa-solid fa-cart-shopping mr-1"></i></span> Delivery Fee : Free</h5>
+                <div
+                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                >
+                  <h4 class="text-lg font-extrabold text-primary-color">
+                    Price - $22.00
+                  </h4>
+                  <h5 class="font-medium opacity-60">
+                    <span><i class="fa-solid fa-cart-shopping mr-1"></i></span>
+                    Delivery Fee : Free
+                  </h5>
                 </div>
               </div>
             </div>
             <!-- Product card 5 -->
             <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
               <figure class="p-0">
-                <img src="./Images/9.png" alt="Jacket" class="rounded-xl w-full" />
+                <img
+                  src="./Images/9.png"
+                  alt="Jacket"
+                  class="rounded-xl w-full"
+                />
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
-                  <span class="mr-1"><i class="fa-solid fa-star text-amber-400"></i></span>
+                  <span class="mr-1"
+                    ><i class="fa-solid fa-star text-amber-400"></i
+                  ></span>
                   <span class="mr-4 opacity-60">5.0</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-eye"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-eye"></i
+                  ></span>
                   <span class="mr-4 opacity-60">20</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-heart"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-heart"></i
+                  ></span>
                   <span class="mr-4 opacity-60">200</span>
                 </div>
                 <div>
-                  <h2 class="card-title text-xl font-extrabold text-secondary-color">World Cup Flags Hockey!</h2>
-                  <p class="text-left mt-3 font-medium opacity-60">Check out our brand new hockey and football products</p>
+                  <h2
+                    class="card-title text-xl font-extrabold text-secondary-color"
+                  >
+                    World Cup Flags Hockey!
+                  </h2>
+                  <p class="text-left mt-3 font-medium opacity-60">
+                    Check out our brand new hockey and football products
+                  </p>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center">
-                  <h4 class="text-lg font-extrabold text-primary-color">Price - $22.00</h4>
-                  <h5 class="font-medium opacity-60"><span><i class="fa-solid fa-cart-shopping mr-1"></i></span> Delivery Fee : Free</h5>
+                <div
+                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                >
+                  <h4 class="text-lg font-extrabold text-primary-color">
+                    Price - $22.00
+                  </h4>
+                  <h5 class="font-medium opacity-60">
+                    <span><i class="fa-solid fa-cart-shopping mr-1"></i></span>
+                    Delivery Fee : Free
+                  </h5>
                 </div>
               </div>
             </div>
             <!-- Product card 6 -->
             <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
               <figure class="p-0">
-                <img src="./Images/10.png" alt="Jacket" class="rounded-xl w-full" />
+                <img
+                  src="./Images/10.png"
+                  alt="Jacket"
+                  class="rounded-xl w-full"
+                />
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
-                  <span class="mr-1"><i class="fa-solid fa-star text-amber-400"></i></span>
+                  <span class="mr-1"
+                    ><i class="fa-solid fa-star text-amber-400"></i
+                  ></span>
                   <span class="mr-4 opacity-60">5.0</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-eye"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-eye"></i
+                  ></span>
                   <span class="mr-4 opacity-60">20</span>
-                  <span class="mr-1 opacity-60"><i class="fa-regular fa-heart"></i></span>
+                  <span class="mr-1 opacity-60"
+                    ><i class="fa-regular fa-heart"></i
+                  ></span>
                   <span class="mr-4 opacity-60">200</span>
                 </div>
                 <div>
-                  <h2 class="card-title text-xl font-extrabold text-secondary-color">World Cup Flags Hockey!</h2>
-                  <p class="text-left mt-3 font-medium opacity-60">Check out our brand new hockey and football products</p>
+                  <h2
+                    class="card-title text-xl font-extrabold text-secondary-color"
+                  >
+                    World Cup Flags Hockey!
+                  </h2>
+                  <p class="text-left mt-3 font-medium opacity-60">
+                    Check out our brand new hockey and football products
+                  </p>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center">
-                  <h4 class="text-lg font-extrabold text-primary-color">Price - $22.00</h4>
-                  <h5 class="font-medium opacity-60"><span><i class="fa-solid fa-cart-shopping mr-1"></i></span> Delivery Fee : Free</h5>
+                <div
+                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                >
+                  <h4 class="text-lg font-extrabold text-primary-color">
+                    Price - $22.00
+                  </h4>
+                  <h5 class="font-medium opacity-60">
+                    <span><i class="fa-solid fa-cart-shopping mr-1"></i></span>
+                    Delivery Fee : Free
+                  </h5>
                 </div>
               </div>
             </div>
-            
+          </div>
+        </div>
+      </section>
+      <!-- FAQ section -->
+      <section class="">
+        <div class="pt-8 pb-24 container2 border-t-2 border-dashed">
+          <div class="text-center pb-8 border-b-2 border-dashed">
+            <h1
+              class="text-[22px] lg:text-4xl font-extrabold text-secondary-color"
+            >
+              Our New Products
+            </h1>
+            <p
+              class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60"
+            >
+              Check out unreleased gear from all of the top hockey brands! Learn
+              about what gear is coming soon and discover which NHL players have
+              already picked it up!
+            </p>
+          </div>
+          <!-- FAQ -->
+          <div
+            class="flex flex-col lg:flex-row gap-10 mt-12 p-6 lg:p-8 border-2 rounded-2xl"
+          >
+            <div class="">
+              <img src="./Images/11.png" alt="" />
+            </div>
+            <div class="flex-1 space-y-2">
+              <!-- question 1 -->
+              <div
+                class="collapse collapse-plus w-full border-b-2 rounded-none"
+              >
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold px-0">
+                  Our Equipment
+                </div>
+                <div class="collapse-content px-0 opacity-60">
+                  <p>
+                    Hockey is often considered the best sport played for various
+                    reasons. It offers fast-paced action, skillful plays, and
+                    intense competition.
+                  </p>
+                </div>
+              </div>
+              <!-- question 2 -->
+              <div
+                class="collapse collapse-plus w-full border-b-2 rounded-none"
+              >
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold px-0">
+                  Hockey Training
+                </div>
+                <div class="collapse-content px-0 opacity-60">
+                  <p>
+                    Hockey is often considered the best sport played for various
+                    reasons. It offers fast-paced action, skillful plays, and
+                    intense competition.
+                  </p>
+                </div>
+              </div>
+              <!-- question 3 -->
+              <div
+                class="collapse collapse-plus w-full border-b-2 rounded-none"
+              >
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold px-0">
+                  Private Lessons
+                </div>
+                <div class="collapse-content px-0 opacity-60">
+                  <p>
+                    Hockey is often considered the best sport played for various
+                    reasons. It offers fast-paced action, skillful plays, and
+                    intense competition.
+                  </p>
+                </div>
+              </div>
+              <!-- question 4 -->
+              <div
+                class="collapse collapse-plus w-full border-b-2 rounded-none"
+              >
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold px-0">
+                  Ski Touring
+                </div>
+                <div class="collapse-content px-0 opacity-60">
+                  <p>
+                    Hockey is often considered the best sport played for various
+                    reasons. It offers fast-paced action, skillful plays, and
+                    intense competition.
+                  </p>
+                </div>
+              </div>
+              <!-- question 5 -->
+              <div
+                class="collapse collapse-plus w-full border-b-2 rounded-none"
+              >
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold px-0">Booking</div>
+                <div class="collapse-content px-0 opacity-60">
+                  <p>
+                    Hockey is often considered the best sport played for various
+                    reasons. It offers fast-paced action, skillful plays, and
+                    intense competition.
+                  </p>
+                </div>
+              </div>
+              <!-- question 6 -->
+              <div class="collapse collapse-plus w-full rounded-none">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold px-0">
+                  Pricings
+                </div>
+                <div class="collapse-content px-0 opacity-60">
+                  <p>
+                    Hockey is often considered the best sport played for various
+                    reasons. It offers fast-paced action, skillful plays, and
+                    intense competition.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
