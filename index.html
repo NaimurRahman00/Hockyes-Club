@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hockey's club</title>
+    <!-- Favicon link -->
+    <link rel="icon" type="image/x-icon" href="/images/hockey-sticks.png" />
     <!-- Tailwind and Daisy UI link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
@@ -48,17 +50,30 @@
         max-width: 1440px;
         margin: auto;
       }
+      .hover-card:hover {
+        transform:perspective(1200px) rotateY(10deg) scale(1.01);
+        box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+        border: none;
+      }
+      .hover-time:before {
+        transition: all .5s ease-in-out;
+      }
 
       /* Responsive part */
       @media screen and (max-width: 640px) {
         .container2 {
           width: 90%;
         }
+        .hover-card:hover {
+        transform:perspective(0px) rotateY(0deg) scale(1);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        border: 2px solid gray;
+      }
       }
     </style>
   </head>
-  <body class="manrope">
-    <header class="pt-6 container2">
+  <body id="home" class="manrope">
+    <header class="pt-3 lg:pt-6 container2">
       <!-- Navbar -->
       <div class="navbar bg-base-100 px-0">
         <div class="navbar-start">
@@ -88,12 +103,12 @@
               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li class="border-b-[1px] border-slate-50">
-                <a class="text-primary-color">Home</a>
+                <a class="text-primary-color" href="#home">Home</a>
               </li>
-              <li class="border-b-[1px] border-slate-50"><a>About</a></li>
-              <li class="border-b-[1px] border-slate-50"><a>Pages</a></li>
-              <li class="border-b-[1px] border-slate-50"><a>Blog</a></li>
-              <li><a>Contact</a></li>
+              <li class="border-b-[1px] border-dashed border-slate-100"><a href="#about">About</a></li>
+              <li class="border-b-[1px] border-dashed border-slate-100"><a href="#pages">Pages</a></li>
+              <li class="border-b-[1px] border-dashed border-slate-100"><a href="#products">Products</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
           <a
@@ -103,11 +118,11 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a class="text-primary-color">Home</a></li>
-            <li><a class="hover:text-primary-color">About</a></li>
-            <li><a class="hover:text-primary-color">Pages</a></li>
-            <li><a class="hover:text-primary-color">Blog</a></li>
-            <li><a class="hover:text-primary-color">Contact</a></li>
+            <li><a class="text-primary-color" href="#home">Home</a></li>
+            <li><a class="hover:text-primary-color" href="#about">About</a></li>
+            <li><a class="hover:text-primary-color" href="#pages">Pages</a></li>
+            <li><a class="hover:text-primary-color" href="#products">Products</a></li>
+            <li><a class="hover:text-primary-color" href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="navbar-end">
@@ -137,21 +152,21 @@
       </div>
       <!-- Banner section -->
       <div>
-        <div class="carousel w-full h-[47%] my-8 space-x-10">
+        <div class="carousel w-full my-4 lg:my-8 space-x-10">
           <!-- Slide 1 -->
-          <div id="slide1" class="carousel-item relative w-full h-[47%]">
+          <div id="slide1" class="carousel-item relative w-full">
             <img src="./Images/1.png" class="w-full" />
             <div
               class="absolute space-x-4 lg:left-8 lg:bottom-8 flex transform left-0 right-0 lg:right-auto flex justify-center bottom-3"
             >
               <a
                 href="#slide3"
-                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl text-base font-light"
+                class="btn min-h-7 lg:min-h-12 size-7 lg:size-12 btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl text-base font-light"
                 >❮</a
               >
               <a
                 href="#slide2"
-                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light"
+                class="btn min-h-7 lg:min-h-12 size-7 lg:size-12 text-base btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light"
                 >❯</a
               >
             </div>
@@ -170,7 +185,7 @@
           <!-- Slide 2 -->
           <div
             id="slide2"
-            class="carousel-item relative w-full lg:h-[580px] rounded-2xl overflow-hidden"
+            class="carousel-item relative w-full rounded-2xl overflow-hidden"
           >
             <img src="./Images/slider-2.jpg" class="w-full" />
             <div
@@ -178,12 +193,12 @@
             >
               <a
                 href="#slide1"
-                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                class="btn min-h-7 lg:min-h-12 size-7 lg:size-12 text-base btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light"
                 >❮</a
               >
               <a
                 href="#slide3"
-                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                class="btn min-h-7 lg:min-h-12 size-7 lg:size-12 text-base btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light"
                 >❯</a
               >
             </div>
@@ -202,7 +217,7 @@
           <!-- Slide 3 -->
           <div
             id="slide3"
-            class="carousel-item relative w-full lg:h-[580px] rounded-2xl overflow-hidden"
+            class="carousel-item relative w-full rounded-2xl overflow-hidden"
           >
             <img src="./Images/slider3.jpg" class="w-full" />
             <div
@@ -210,12 +225,12 @@
             >
               <a
                 href="#slide2"
-                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                class="btn min-h-7 lg:min-h-12 size-7 lg:size-12 text-base btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light"
                 >❮</a
               >
               <a
                 href="#slide1"
-                class="btn btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 text-2xl font-light"
+                class="btn min-h-7 lg:min-h-12 size-7 lg:size-12 text-base btn-circle bg-secondary-color text-white hover:text-secondary-color border-0 lg:text-2xl font-light"
                 >❯</a
               >
             </div>
@@ -245,7 +260,7 @@
     </header>
     <main>
       <!-- Professional Hockeys Club Section -->
-      <section class="lg:py-24">
+      <section id="about" class="pb-7 lg:py-24">
         <div class="pt-8 container2 border-t-2 border-dashed">
           <div class="text-center pb-8 border-b-2 border-dashed">
             <h1
@@ -266,13 +281,19 @@
             <!-- progress 1 -->
             <div class="text-center">
               <div
-                class="radial-progress text-primary-color"
+                class="radial-progress text-primary-color transform rotate-[130deg] relative"
                 style="--value: 87; --size: 7.5rem"
                 role="progressbar"
               >
-                <span class="text-secondary-color font-extrabold">87%</span>
+                <span
+                  class="text-secondary-color font-extrabold transform -rotate-[130deg]"
+                  >87%</span
+                >
+                <div
+                  class="size-[7.5rem] absolute bottom-0 right-0 border-[12px] rounded-full -z-10"
+                ></div>
               </div>
-              <h3 class="text-xl font-medium mt-6">Prayer Facility</h3>
+              <h3 class="text-xl font-semibold mt-6">Prayer Facility</h3>
               <p class="text-secondary-color opacity-60 m-4">
                 In this club we provide prayer Facility for every religion.
               </p>
@@ -280,28 +301,39 @@
             <!-- progress 2 -->
             <div class="text-center">
               <div
-                class="radial-progress text-green-500"
+                class="radial-progress text-green-500 transform rotate-[100deg] relative"
                 style="--value: 95; --size: 7.5rem"
                 role="progressbar"
               >
-                <span class="text-secondary-color font-extrabold">95%</span>
+                <span
+                  class="text-secondary-color font-extrabold transform -rotate-[100deg]"
+                  >95%</span
+                >
+                <div
+                  class="size-[7.5rem] absolute bottom-0 right-0 border-[12px] rounded-full -z-10"
+                ></div>
               </div>
-              <h3 class="text-xl font-medium mt-6">Experienced Coach</h3>
+              <h3 class="text-xl font-semibold mt-6">Experienced Coach</h3>
               <p class="text-secondary-color opacity-60 m-4">
-                In this club we have experienced coach for improvment our
-                players.
+                In this club we have experienced coaches.
               </p>
             </div>
             <!-- progress 3 -->
             <div class="text-center">
               <div
-                class="radial-progress text-yellow-500"
+                class="radial-progress text-yellow-500 transform rotate-[120deg] relative"
                 style="--value: 90; --size: 7.5rem"
                 role="progressbar"
               >
-                <span class="text-secondary-color font-extrabold">90%</span>
+                <span
+                  class="text-secondary-color font-extrabold transform -rotate-[120deg]"
+                  >90%</span
+                >
+                <div
+                  class="size-[7.5rem] absolute bottom-0 right-0 border-[12px] rounded-full -z-10"
+                ></div>
               </div>
-              <h3 class="text-xl font-medium mt-6">Senior Player</h3>
+              <h3 class="text-xl font-semibold mt-6">Senior Player</h3>
               <p class="text-secondary-color opacity-60 m-4">
                 In this club we have senior and experienced players.
               </p>
@@ -309,13 +341,19 @@
             <!-- progress 4 -->
             <div class="text-center">
               <div
-                class="radial-progress text-blue-500"
+                class="radial-progress text-blue-500 transform rotate-[160deg] relative"
                 style="--value: 80; --size: 7.5rem"
                 role="progressbar"
               >
-                <span class="text-secondary-color font-extrabold">80%</span>
+                <span
+                  class="text-secondary-color font-extrabold transform -rotate-[160deg]"
+                  >80%</span
+                >
+                <div
+                  class="size-[7.5rem] absolute bottom-0 right-0 border-[12px] rounded-full -z-10"
+                ></div>
               </div>
-              <h3 class="text-xl font-medium mt-6">Training Ground</h3>
+              <h3 class="text-xl font-semibold mt-6">Training Ground</h3>
               <p class="text-secondary-color opacity-60 m-4">
                 In this club we have few training ground for our players.
               </p>
@@ -324,7 +362,7 @@
         </div>
       </section>
       <!-- Program section -->
-      <section class="">
+      <section id="pages" class="">
         <div class="pt-8 container2 border-t-2 border-dashed">
           <div class="text-center pb-8 border-b-2 border-dashed">
             <h1
@@ -340,17 +378,18 @@
             </p>
           </div>
           <!-- Cards -->
-          <div class="mt-12 mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="mt-12 mb-10 lg:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Card 1 -->
-            <div class="card shadow-xl image-full">
-              <figure class="">
-                <img class="w-full" src="./Images/2.png" alt="Hockey" />
-              </figure>
+            <div
+              class="flex shadow-xl image-full bg-[url('./images/2.png')] bg-no-repeat bg-cover bg-center rounded-xl before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-[black] before:to-[black] before:opacity-40 before:z-[-5] relative overflow-hidden block z-[5] lg:pt-[70px] hover:before:opacity-60 hover-time"
+            >
               <div class="card-body justify-end">
-                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">
+                <h2
+                  class="card-title text-xl lg:text-[28px] font-extrabold text-white"
+                >
                   Junior Program
                 </h2>
-                <p class="mt-4 font-medium flex-grow-0">
+                <p class="mt-4 font-medium flex-grow-0 text-white">
                   Welcome to Hockey Bangladesh Programs. We want all Bangladeshi
                   involved in the game, so we are creating more opportunities
                   for more people to play hockey in more ways.
@@ -365,13 +404,16 @@
               </div>
             </div>
             <!-- Card 2 -->
-            <div class="card shadow-xl image-full">
-              <figure><img src="./Images/3.png" alt="Hockey" /></figure>
+            <div
+              class="flex shadow-xl image-full bg-[url('./images/3.png')] bg-no-repeat bg-cover bg-center rounded-xl before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-[black] before:to-[black] before:opacity-45 before:z-[-5] relative overflow-hidden block z-[5] hover:before:opacity-60 hover-time"
+            >
               <div class="card-body justify-end">
-                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">
+                <h2
+                  class="card-title text-xl lg:text-[28px] font-extrabold text-white"
+                >
                   Teenager Program
                 </h2>
-                <p class="mt-4 font-medium flex-grow-0">
+                <p class="mt-4 font-medium flex-grow-0 text-white">
                   Welcome to Hockey Bangladesh Programs. We want all Bangladeshi
                   involved in the game, so we are creating more opportunities
                   for more people to play hockey in more ways.
@@ -386,15 +428,12 @@
               </div>
             </div>
             <!-- Card 3 -->
-            <div class="card shadow-xl image-full lg:col-span-2">
-              <figure>
-                <img class="w-full" src="./Images/4.png" alt="Hockey" />
-              </figure>
+            <div class="flex shadow-xl image-full bg-[url('./images/4.png')] bg-no-repeat bg-cover bg-center rounded-xl before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-[black] before:to-[black] before:opacity-45 before:z-[-5] relative overflow-hidden block z-[5] lg:pt-52 lg:col-span-2 hover:before:opacity-60 hover-time">
               <div class="card-body justify-end lg:w-1/2">
-                <h2 class="card-title text-xl lg:text-[28px] font-extrabold">
+                <h2 class="card-title text-xl lg:text-[28px] font-extrabold text-white">
                   Professional Program
                 </h2>
-                <p class="mt-4 font-medium flex-grow-0">
+                <p class="mt-4 font-medium flex-grow-0 text-white lg:w-1/2">
                   Welcome to Hockey Bangladesh Programs. We want all Bangladeshi
                   involved in the game, so we are creating more opportunities
                   for more people to play hockey in more ways.
@@ -412,7 +451,7 @@
         </div>
       </section>
       <!-- Our New Products Section -->
-      <section class="">
+      <section id="products" class="">
         <div class="pt-8 container2 border-t-2 border-dashed">
           <div class="text-center pb-8 border-b-2 border-dashed">
             <h1
@@ -429,15 +468,16 @@
             </p>
           </div>
           <!-- All products -->
-          <div class="pt-12 mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="pt-12 mb-10 lg:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Product card 1 -->
-            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
+            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5 transition duration-500 lg:hover:bg-gradient-to-r from-rose-400 to-rose-200 hover-card">
               <figure class="p-0">
                 <img
                   src="./Images/5.png"
                   alt="Jacket"
-                  class="rounded-xl w-full"
+                  class="rounded-xl w-full hidden lg:flex"
                 />
+                <img src="./Images/card1-mob.png" alt="" class="lg:hidden w-full rounded-xl">
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
@@ -465,7 +505,7 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                  class="flex flex-wrap flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
                 >
                   <h4 class="text-lg font-extrabold text-primary-color">
                     Price - $22.00
@@ -478,13 +518,14 @@
               </div>
             </div>
             <!-- Product card 2 -->
-            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
+            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5 transition duration-500 lg:hover:bg-gradient-to-r from-rose-400 to-rose-200 hover-card">
               <figure class="p-0">
                 <img
                   src="./Images/6.png"
-                  alt="Jacket"
-                  class="rounded-xl w-full"
+                  alt=""
+                  class="rounded-xl w-full hidden lg:flex"
                 />
+                <img src="./Images/card2-mob.png" alt="" class="lg:hidden w-full rounded-xl">
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
@@ -512,7 +553,7 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                  class="flex flex-wrap flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
                 >
                   <h4 class="text-lg font-extrabold text-primary-color">
                     Price - $22.00
@@ -525,13 +566,14 @@
               </div>
             </div>
             <!-- Product card 3 -->
-            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
+            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5 transition duration-500 lg:hover:bg-gradient-to-r from-rose-400 to-rose-200 hover-card">
               <figure class="p-0">
                 <img
                   src="./Images/7.png"
                   alt="Jacket"
-                  class="rounded-xl w-full"
+                  class="rounded-xl w-full hidden lg:flex"
                 />
+                <img src="./Images/card3-mob.png" alt="" class="lg:hidden w-full rounded-xl">
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
@@ -559,7 +601,7 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                  class="flex flex-wrap flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
                 >
                   <h4 class="text-lg font-extrabold text-primary-color">
                     Price - $22.00
@@ -572,13 +614,14 @@
               </div>
             </div>
             <!-- Product card 4 -->
-            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
+            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5 transition duration-500 lg:hover:bg-gradient-to-r from-rose-400 to-rose-200 hover-card">
               <figure class="p-0">
                 <img
                   src="./Images/8.png"
                   alt="Jacket"
-                  class="rounded-xl w-full"
+                  class="rounded-xl w-full hidden lg:flex"
                 />
+                <img src="./Images/card4-mob.png" alt="" class="lg:hidden w-full rounded-xl">
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
@@ -606,7 +649,7 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                  class="flex flex-wrap flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
                 >
                   <h4 class="text-lg font-extrabold text-primary-color">
                     Price - $22.00
@@ -619,13 +662,14 @@
               </div>
             </div>
             <!-- Product card 5 -->
-            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
+            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5 transition duration-500 lg:hover:bg-gradient-to-r from-rose-400 to-rose-200 hover-card">
               <figure class="p-0">
                 <img
                   src="./Images/9.png"
                   alt="Jacket"
-                  class="rounded-xl w-full"
+                  class="rounded-xl w-full hidden lg:flex"
                 />
+                <img src="./Images/card5-mob.png" alt="" class="lg:hidden w-full rounded-xl">
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
@@ -653,7 +697,7 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                  class="flex flex-wrap flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
                 >
                   <h4 class="text-lg font-extrabold text-primary-color">
                     Price - $22.00
@@ -666,13 +710,14 @@
               </div>
             </div>
             <!-- Product card 6 -->
-            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5">
+            <div class="card bg-base-100 border-2 lg:flex-row p-6 gap-5 transition duration-500 lg:hover:bg-gradient-to-r from-rose-400 to-rose-200 hover-card">
               <figure class="p-0">
                 <img
                   src="./Images/10.png"
                   alt="Jacket"
-                  class="rounded-xl w-full"
+                  class="rounded-xl w-full hidden lg:flex"
                 />
+                <img src="./Images/card6-mob.png" alt="" class="lg:hidden w-full rounded-xl">
               </figure>
               <div class="card-body items-start p-0">
                 <div class="">
@@ -700,7 +745,7 @@
                   </p>
                 </div>
                 <div
-                  class="flex flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
+                  class="flex flex-wrap flex-col lg:flex-row gap-4 lg:gap-5 lg:items-center"
                 >
                   <h4 class="text-lg font-extrabold text-primary-color">
                     Price - $22.00
@@ -722,7 +767,7 @@
             <h1
               class="text-[22px] lg:text-4xl font-extrabold text-secondary-color"
             >
-              Our New Products
+            Clients Question
             </h1>
             <p
               class="text-sm lg:text-base font-medium w-4/5 lg:w-3/5 m-auto mt-4 lg:mt-6 text-secondary-color opacity-60"
@@ -737,12 +782,13 @@
             class="flex flex-col lg:flex-row gap-10 mt-12 p-6 lg:p-8 border-2 rounded-2xl"
           >
             <div class="">
-              <img src="./Images/11.png" alt="" />
+              <img src="./Images/11.png" alt="" class="hidden lg:flex"/>
+              <img src="./Images/faq-mob.png" alt="" class="lg:hidden">
             </div>
             <div class="flex-1 space-y-2">
               <!-- question 1 -->
               <div
-                class="collapse collapse-plus w-full border-b-2 rounded-none"
+                class="collapse collapse-plus w-full border-b-2 rounded-none active:bg-red-50 rounded-xl"
               >
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title text-xl font-bold px-0">
@@ -758,7 +804,7 @@
               </div>
               <!-- question 2 -->
               <div
-                class="collapse collapse-plus w-full border-b-2 rounded-none"
+                class="collapse collapse-plus w-full border-b-2 rounded-none active:bg-yellow-50 rounded-xl"
               >
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title text-xl font-bold px-0">
@@ -774,7 +820,7 @@
               </div>
               <!-- question 3 -->
               <div
-                class="collapse collapse-plus w-full border-b-2 rounded-none"
+                class="collapse collapse-plus w-full border-b-2 rounded-none active:bg-green-50 rounded-xl"
               >
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title text-xl font-bold px-0">
@@ -790,7 +836,7 @@
               </div>
               <!-- question 4 -->
               <div
-                class="collapse collapse-plus w-full border-b-2 rounded-none"
+                class="collapse collapse-plus w-full border-b-2 rounded-none active:bg-blue-50 rounded-xl"
               >
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title text-xl font-bold px-0">
@@ -806,7 +852,7 @@
               </div>
               <!-- question 5 -->
               <div
-                class="collapse collapse-plus w-full border-b-2 rounded-none"
+                class="collapse collapse-plus w-full border-b-2 rounded-none active:bg-cyan-50 rounded-xl"
               >
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title text-xl font-bold px-0">Booking</div>
@@ -819,7 +865,7 @@
                 </div>
               </div>
               <!-- question 6 -->
-              <div class="collapse collapse-plus w-full rounded-none">
+              <div class="collapse collapse-plus w-full rounded-none active:bg-teal-50 rounded-xl">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title text-xl font-bold px-0">
                   Pricings
@@ -837,7 +883,7 @@
         </div>
       </section>
       <!-- Get in touch -->
-      <section class="">
+      <section id="contact" class="">
         <div class="pt-8 pb-10 lg:pb-24 container2 border-t-2 border-dashed">
           <div class="text-center pb-8 border-b-2 border-dashed">
             <h1
@@ -857,7 +903,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-5 mt-12 lg:gap-6">
             <!-- box 1 -->
             <div class="border-2 rounded-xl p-6 lg:p-12 space-y-6 col-span-2">
-              <div class="bg-lime-50 lg:pb-12 p-6 rounded-xl">
+              <div class="bg-lime-50 hover:bg-lime-100 lg:pb-12 p-6 rounded-xl">
                 <div>
                   <img src="./Images/call.png" alt="telephone" />
                   <h4 class="text-secondary-color text-lg font-extrabold mt-6">
@@ -867,7 +913,7 @@
                   </h4>
                 </div>
               </div>
-              <div class="bg-yellow-50 lg:pb-12 p-6 rounded-xl">
+              <div class="bg-yellow-50 hover:bg-yellow-100 lg:pb-12 p-6 rounded-xl">
                 <div>
                   <img src="./Images/envelop.png" alt="telephone" />
                   <h4 class="text-secondary-color text-lg font-extrabold mt-6">
@@ -877,7 +923,7 @@
                   </h4>
                 </div>
               </div>
-              <div class="bg-blue-50 lg:pb-12 p-6 rounded-xl">
+              <div class="bg-blue-50 hover:bg-yellow-100 lg:pb-12 p-6 rounded-xl">
                 <div>
                   <img src="./Images/pin.png" alt="telephone" />
                   <h4 class="text-secondary-color text-lg font-extrabold mt-6">
@@ -899,6 +945,7 @@
                     type="text"
                     placeholder="Enter your email"
                     class="input w-full outline-0 bg-slate-100 h-[64px]"
+                    required
                   />
                 </div>
                 <div class="label flex flex-col items-start p-0">
@@ -909,6 +956,7 @@
                     type="text"
                     placeholder="Enter your Email"
                     class="input w-full outline-0 bg-slate-100 h-[64px]"
+                    required
                   />
                 </div>
                 <div class="label flex flex-col items-start p-0">
@@ -917,6 +965,7 @@
                     type="text"
                     placeholder="Enter your subject"
                     class="input w-full outline-0 bg-slate-100 h-[64px]"
+                    required
                   />
                 </div>
                 <div class="label flex flex-col items-start p-0">
@@ -927,6 +976,7 @@
                     type="text"
                     placeholder="Enter your phone number"
                     class="input w-full outline-0 bg-slate-100 h-[64px]"
+                    required
                   />
                 </div>
                 <div class="label flex flex-col items-start p-0 lg:col-span-2">
@@ -934,10 +984,11 @@
                   <textarea
                     placeholder="Write your message"
                     class="textarea border-0 outline-none textarea-lg h-[200px] lg:h-[350px] w-full resize-none bg-slate-100 rounded-xl"
+                    required
                   ></textarea>
                 </div>
                 <button
-                  class="btn btn-block bg-primary-color lg:col-span-2 h-[64px] text-white"
+                  class="btn btn-block bg-primary-color lg:col-span-2 h-[64px] text-white hover:text-black"
                 >
                   Send Message
                 </button>
@@ -945,11 +996,11 @@
             </div>
             <!-- box 3 -->
             <div
-              class="lg:col-span-5 bg-slate-100 mt-10 lg:mt-4 py-9 rounded-xl"
+              class="lg:col-span-5 bg-slate-100 hover:bg-slate-200 mt-10 lg:mt-4 py-9 rounded-xl"
             >
               <h4 class="text-2xl font-extrabold text-center">Social Media</h4>
               <div class="text-center mt-6 space-x-6 text-2xl">
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-twitter animate-bounce"></i>
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-github"></i>
